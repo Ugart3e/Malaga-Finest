@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Málaga Finest Team</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* =======================
+   B A R L O W
+======================= */
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./fonts/Barlow-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./fonts/Barlow-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./fonts/Barlow-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./fonts/Barlow-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =======================
+   B R A N D O N   G R O T E S Q U E
+======================= */
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('./fonts/BrandonGrotesque-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =======================
+   P L A Y F A I R   D I S P L A Y
+======================= */
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+  .font-barlow {
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-brandon {
+    font-family: 'Brandon Grotesque', sans-serif;
+  }
+  </style>
+
+  <!-- AOS (Animate On Scroll) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+</head>
+
+<body>
+
+
+<header class="w-full bg-black text-white">
+
+  <!-- Idiomas -->
+  <div class="w-full flex justify-end px-4 md:px-10 py-2 text-xs tracking-widest">
+    <div class="flex gap-2 items-center">
+      <button class="text-white">ES</button>
+      <span class="text-gray-500">/</span>
+      <button class="text-gray-400 hover:text-white transition">ENG</button>
+      <span class="text-gray-500">/</span>
+      <button class="text-gray-400 hover:text-white transition">FR</button>
+    </div>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="w-full px-4 md:px-10 pb-6 md:pb-10">
+
+    <!-- Desktop grande: logo + nav en misma fila -->
+    <div class="hidden lg:grid grid-cols-[1fr_1.2fr_2fr] items-center">
+
+      <div></div>
+
+      <!-- Logo a ~1/3 -->
+      <div class="flex justify-center">
+        <img src="/img/Logo_header.png" alt="Malaga Finest" class="w-52" />
+      </div>
+
+      <!-- Navbar -->
+      <nav class="flex justify-end items-center gap-6 pt-16 text-xs tracking-[0.25em] pr-24">
+        <a href="/index.html" class="border-r border-white px-4 hover:opacity-60 transition">HOME</a>
+        <a href="/pages/services.html" class="border-r border-white pr-4 hover:opacity-60 transition">SERVICES</a>
+        <a href="/pages/MFTeam.html" class="border-r border-white pr-4 hover:opacity-60 transition">MF TEAM</a>
+        <a href="/pages/Contact.html" class="pr-6 hover:opacity-60 transition">CONTACT US</a>
+        <a href="#" class="text-red-600 hover:opacity-70 transition">MEMBERSHIP</a>
+      </nav>
+    </div>
+
+    <!-- Desktop medio: logo y nav en filas separadas -->
+    <div class="hidden md:grid lg:hidden gap-6">
+
+      <div class="flex justify-center">
+        <img src="/img/Logo_header.png" alt="Malaga Finest" class="w-48" />
+      </div>
+
+      <nav class="flex justify-center flex-wrap gap-6 text-xs tracking-[0.25em]">
+        <a href="/index.html">HOME</a>
+        <a href="/pages/services.html">SERVICES</a>
+        <a href="/pages/MFTeam.html">MF TEAM</a>
+        <a href="/pages/Contact.html">CONTACT US</a>
+        <a href="#" class="text-red-600">MEMBERSHIP</a>
+      </nav>
+    </div>
+
+    <!-- Mobile -->
+    <div class="md:hidden flex items-center justify-between mt-4">
+      <img src="/img/Logo_header.png" alt="Malaga Finest" class="w-40" />
+      <button class="text-2xl">☰</button>
+    </div>
+
+  </div>
+</header>
+
+  <main class="mx-auto">
+
+<!-- Logo intro -->
+<div class="relative h-[250px] sm:h-[300px] md:h-[450px] overflow-hidden">
+  <!-- Imagen de fondo -->
+  <div class="absolute w-full inset-0 bg-[url('/img/img23.jpg')] bg-cover bg-center"></div>
+  <!-- Overlay y contenido -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="bg-black/65 pt-4 px-4 sm:px-10 md:px-20 text-center max-w-full sm:max-w-[90%] md:max-w-[80%]">
+      <!-- Logo -->
+      <img src="/img/logo_mfinest_formatos_traz_blanco_claro.png" 
+           alt="logo" 
+           class="w-40 sm:w-56 md:w-72 mx-auto">
+      <!-- Texto -->
+      <p class="text-white mt-1 pb-4 sm:pb-6 md:pb-10 text-xs sm:text-sm md:text-xs font-playfair">
+        Discover the real Málaga with <br> the finest concierge team.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section class="bg-black">
+  <!-- Imagen superior (sin cambios) -->
+  <div class="relative w-full h-[400px] sm:h-[600px] md:h-[800px] lg:h-[1000px] overflow-hidden">
+    <img
+      src="/img/img6.jpg"
+      alt=""
+      class="w-full h-full object-cover object-center"
+    />
+  </div>
+
+  <!-- Contenedor de cards -->
+<div class="relative bg-white -mt-24 pt-24 pb-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+        <!-- Card -->
+        <div  data-aos="fade-up" data-aos-duration="1000"  class="flex flex-col items-center h-full space-y-6">
+          <img src="/img/frank.jpg" class="w-28 h-28 rounded-full object-cover" alt="Frank Rambla" />
+          <div class="text-center">
+            <h3 class="text-lg font-playfair">Frank Rambla</h3>
+            <p class="text-xs uppercase tracking-widest text-gray-500 mt-1">Co-founder · Strategic Partnerships</p>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed text-center">
+            With a strong background in institutional relations and business development, Frank connects Málaga Finest with key players in the international ecosystem.
+          </p>
+          <p class="text-sm font-medium text-center font-playfair">frambla@malagafinest.com</p>
+<!-- Redes sociales debajo del email -->
+<div class="flex justify-center gap-4 mt-2">
+  <div class="w-6 h-6 bg-[#69675F] rounded-full bg-[url('/img/x.svg')] bg-center bg-no-repeat bg-[length:12px_12px]"></div>
+  <div class="w-6 h-6 bg-[#69675F] rounded-full bg-[url('/img/in.svg')] bg-center bg-no-repeat bg-[length:12px_12px]"></div>
+</div>
+        </div>
+
+        <!-- Card -->
+        <div  data-aos="fade-up" data-aos-duration="1000" class="flex flex-col items-center h-full space-y-6">
+          <img src="/img/marlin.jpg" class="w-28 h-28 rounded-full object-cover" alt="Marlin Franzen" />
+          <div class="text-center">
+            <h3 class="text-lg font-playfair">Marlin Franzen</h3>
+            <p class="text-xs uppercase tracking-widest text-gray-500 mt-1">Co-founder · Creative & Events Director</p>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed text-center">
+            A specialist in sensory branding and experience design, Marlin brings the aesthetic and emotional soul to Málaga Finest.
+          </p>
+          <p class="text-sm font-medium text-center font-playfair">mfranzen@malagafinest.com</p>
+<!-- Redes sociales debajo del email -->
+<div class="flex justify-center gap-4 mt-2">
+  <div class="w-6 h-6 bg-[#69675F] rounded-full bg-[url('/img/x.svg')] bg-center bg-no-repeat bg-[length:12px_12px]"></div>
+  <div class="w-6 h-6 bg-[#69675F] rounded-full bg-[url('/img/in.svg')] bg-center bg-no-repeat bg-[length:12px_12px]"></div>
+</div>
+        </div>
+
+        <!-- Card -->
+        <div  data-aos="fade-up" data-aos-duration="1000" class="flex flex-col items-center h-full space-y-6">
+          <img src="/img/tobias.jpg" class="w-28 h-28 rounded-full object-cover" alt="Tobias Hedlund" />
+          <div class="text-center">
+            <h3 class="text-lg font-playfair">Tobias Hedlund</h3>
+            <p class="text-xs uppercase tracking-widest text-gray-500 mt-1">Co-founder · Business Development</p>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed text-center">
+            Tobias brings extensive experience in high-end real estate, strategic investments and international markets.
+          </p>
+          <p class="text-sm font-medium text-center font-playfair">thedlund@malagafinest.com</p>
+<!-- Redes sociales debajo del email -->
+<div class="flex justify-center gap-4 mt-2">
+  <div class="w-6 h-6 bg-[#69675F] rounded-full bg-[url('/img/x.svg')] bg-center bg-no-repeat bg-[length:12px_12px]"></div>
+  <div class="w-6 h-6 bg-[#69675F] rounded-full bg-[url('/img/in.svg')] bg-center bg-no-repeat bg-[length:12px_12px]"></div>
+</div>
+        </div>
+
+        <!-- Card -->
+        <div  data-aos="fade-up" data-aos-duration="1000" class="flex flex-col items-center h-full space-y-6">
+          <img src="/img/amir.jpg" class="w-28 h-28 rounded-full object-cover" alt="Amir Dochmen" />
+          <div class="text-center">
+            <h3 class="text-lg font-playfair">Amir Dochmen</h3>
+            <p class="text-xs uppercase tracking-widest text-gray-500 mt-1">Operations & Market Insight</p>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed text-center">
+            With over years in Málaga and international academic training, Amir bridges local insight with global perspective.
+          </p>
+          <p class="text-sm font-medium text-center font-playfair">adochmen@malagafinest.com</p>
+<!-- Redes sociales debajo del email -->
+<div class="flex justify-center gap-4 mt-2">
+  <div class="w-6 h-6 bg-[#69675F] rounded-full bg-[url('/img/x.svg')] bg-center bg-no-repeat bg-[length:12px_12px]"></div>
+  <div class="w-6 h-6 bg-[#69675F] rounded-full bg-[url('/img/in.svg')] bg-center bg-no-repeat bg-[length:12px_12px]"></div>
+</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+  <div class="p-6 sm:p-8 md:p-12 bg-black shadow rounded flex flex-col items-center">
+    <p  data-aos="fade-up" data-aos-duration="1000" class="text-xl sm:text-2xl md:text-2xl text-center font-medium font-playfair text-white mb-2">
+      Would you like to be part of Malaga Finest?
+    </p>
+    <p  data-aos="fade-up" data-aos-duration="1000" class="text-[10px] sm:text-[12px] md:text-[12px] text-center mb-4 sm:mb-6 md:mb-8 text-white font-barlow font-bold uppercase">
+      A UNIQUE MOMENT FOR MALAGA. AN OPPORTUNITY TO BE PART OF SOMETHING EXTRAORDINARY.
+    </p>
+    <p  data-aos="fade-up" data-aos-duration="1000" class="text-sm sm:text-base md:text-base text-center text-white mb-4 sm:mb-6 md:mb-8 font-playfair leading-relaxed">
+      Málaga is undergoing an unprecedented transformation. From a historic city to a cultural, technological, and lifestyle hub, it has <br>
+      become one of the most attractive destinations in Southern Europe. The continuous influx of global talent, investors, creatives, and <br>
+      luxury professionals is reshaping its identity—blending the local spirit with a cosmopolitan edge.
+    </p>
+    <p  data-aos="fade-up" data-aos-duration="1000" class="text-sm sm:text-base md:text-base text-center text-white font-playfair font-bold leading-relaxed">
+      In this context, Malaga Finest emerges as a living platform that channels this energy into high-level experiences, connections, and <br>
+      services. We are looking to bring together talent, vision, and commitment to grow alongside the city.
+    </p>
+  </div>
+</div>
+
+    <!-- imagen-->
+<div class="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px] overflow-hidden">
+  <div class="absolute w-full h-full inset-0 bg-[url('/img/img1.jpg')] bg-cover bg-center"></div>
+</div>
+
+<div class="bg-black w-full flex flex-col md:flex-row h-auto md:h-96">
+  <!-- Collaborators -->
+  <div data-aos="fade-up" data-aos-duration="1000" class="flex-1 p-6 flex flex-col justify-center relative">
+    <p class="text-center text-white font-playfair text-2xl">Collaborators</p>
+    <p class="text-center text-white font-barlow text-xs font-bold mb-6">JOIN A NETWORK OF EXCELLENCE</p>
+    <p class="text-center text-white font-barlow text-sm mb-12">
+      Professionals and brands who share our values <br>
+      of excellence, authenticity, and discretion. From <br>
+      hospitality experts and wellness specialists to <br>
+      creatives, chefs, and experience curators.
+    </p>
+    <div class="hidden md:block absolute top-1/2 transform -translate-y-1/2 right-0 h-4/5 border-r border-white"></div>
+  </div>
+  <!-- Investors -->
+  <div data-aos="fade-up" data-aos-duration="1000" class="flex-1 p-6 flex flex-col justify-center relative">
+    <p class="text-center text-white font-playfair text-2xl">Investors</p>
+    <p class="text-center text-white font-barlow text-xs font-bold mb-6">BE PART OF A VISIONARY PROJECT</p>
+    <p class="text-center text-white font-barlow text-sm mb-12">
+      Individuals and entities with a forward-looking <br>
+      vision who want to be part of a purpose-driven <br>
+      brand connected to lifestyle, hospitality, and <br>
+      strategic investment in Málaga.
+    </p>
+    <div class="hidden md:block absolute top-1/2 transform -translate-y-1/2 right-0 h-4/5 border-r border-white"></div>
+  </div>
+  <!-- Affiliates & Members -->
+  <div data-aos="fade-up" data-aos-duration="1000" class="flex-1 p-6 flex flex-col justify-center">
+    <p class="text-center text-white font-playfair text-2xl">Affiliates & Members</p>
+    <p class="text-center text-white font-barlow text-xs font-bold mb-6">
+      CONNECT, BELONG, AND EXPERIENCE MÁLAGA <br> THROUGH A CURATED COMMUNITY
+    </p>
+    <p class="text-center text-white font-barlow text-sm mb-12">
+      People seeking to join a curated community, <br>
+      connect with the best of Málaga, and experience <br>
+      a new way of belonging.
+    </p>
+  </div>
+</div>
+
+<!-- Malaga Finest Membership -->
+<div class="relative h-[300px] sm:h-[450px] md:h-[750px] rounded overflow-hidden">
+  <!-- Imagen de fondo -->
+  <div class="absolute w-full h-full inset-0 bg-[url('/img/img22.jpg')] bg-cover bg-center"></div>
+
+  <!-- Overlay y contenido -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="bg-black/60 p-6 sm:p-8 md:p-12 rounded-lg text-center max-w-[80%]">
+      <h2 class="text-white text-2xl sm:text-3xl md:text-4xl font-playfair mb-2">
+        Malaga Finest Membership
+      </h2>
+      <p class="text-white text-xs sm:text-sm md:text-sm font-barlow font-bold mb-4">
+        YOUR PRIVILEGED ACCESS TO THE BEST OF MÁLAGA
+      </p>
+      <p class="text-white text-sm sm:text-sm md:text-sm font-playfair leading-relaxed mb-3">
+        The Malaga Finest membership is designed for those who want to experience the city <br>
+        from within — with authenticity, comfort, and style. More than a service, it’s an invitation <br>
+        to be part of a curated community, connected to Málaga’s most sophisticated pulse.
+      </p>
+      <p class="text-white text-sm sm:text-sm md:text-sm font-playfair leading-relaxed mb-3">
+        Our members enjoy preferred access to unique experiences, exclusive venues, private <br>
+        events, and a carefully selected local network. They are supported by an expert team <br>
+        that understands their needs and takes care of every detail — from daily life to travel <br>
+        and investment.
+      </p>
+      <p class="text-white text-sm sm:text-sm md:text-sm font-playfair leading-relaxed mb-6">
+        Whether you live in Málaga, are relocating, or seeking a Mediterranean base for lifestyle <br>
+        and business, our membership offers tailor-made support with complete discretion.
+      </p>
+      <div class="hover:cursor-pointer bg-white rounded-xl w-48 mx-auto text-center py-2 font-playfair text-sm hover:bg-gray-200 transition">
+        Coming soon
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form -->
+<div class="bg-black w-full mt-8 mb-10 py-6">
+  <p class="text-center text-white text-2xl font-playfair mb-6">I want more information</p>
+  <form action="" method="post" class="flex flex-col w-[90%] mx-auto gap-4">
+    <!-- Inputs -->
+    <div class="flex flex-col md:flex-row w-full gap-4">
+      <input type="text" placeholder="Name" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="text" placeholder="Surname" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="email" placeholder="Email" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="number" placeholder="Phone" class="font-playfair h-10 w-full pl-2 rounded-sm">
+    </div>
+    <!-- Checkbox -->
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-2 text-white text-xs font-playfair">
+      <input type="checkbox" class="mt-1 md:mt-0">
+      <p>
+        I have read and accept the Legal Notice and Privacy Policy. I consent to the storage and handling of my data by this website.
+      </p>
+    </div>
+    <!-- Send Button -->
+    <div class="flex justify-center mt-4">
+      <button type="submit" class="px-6 py-2 bg-white text-black rounded-full text-xs font-brandon hover:bg-gray-200 transition">
+        SEND IT
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- Socials / Footer -->
+<div class="bg-[#CFD0C5] bg-[url('/img/logomfsocial.png')] bg-cover bg-center">
+
+  <!-- Logo -->
+  <img src="/img/logo_socials.png" class="w-60 sm:w-72 md:w-80 my-12 mx-auto pb-8" alt="Logo Socials">
+
+  <!-- Navigation links -->
+  <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 mb-6 justify-center items-center font-barlow text-sm text-gray-800">
+    <p class="sm:border-r-2 sm:pr-4 border-gray-800">HOME</p>
+    <p class="sm:border-r-2 sm:pr-4 border-gray-800">SERVICES</p>
+    <p class="sm:border-r-2 sm:pr-4 border-gray-800">MF TEAM</p>
+    <p>CONTACT US</p>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="flex flex-wrap gap-4 sm:gap-12 mb-6 justify-center">
+    <div class="w-10 h-10 bg-[#69675F] rounded-full bg-[url('/img/ig.svg')] bg-center bg-no-repeat bg-[length:20px_20px]"></div>
+    <div class="w-10 h-10 bg-[#69675F] rounded-full bg-[url('/img/x.svg')] bg-center bg-no-repeat bg-[length:20px_20px]"></div>
+    <div class="w-10 h-10 bg-[#69675F] rounded-full bg-[url('/img/yt.svg')] bg-center bg-no-repeat bg-[length:20px_20px]"></div>
+    <div class="w-10 h-10 bg-[#69675F] rounded-full bg-[url('/img/in.svg')] bg-center bg-no-repeat bg-[length:20px_20px]"></div>
+  </div>
+
+  <!-- Contact info -->
+  <p class="text-center text-gray-600 font-barlow mb-6">
+    info@malagafinest.com <b class="font-extrabold"> · </b> 0034 678 909 000
+  </p>
+
+  <!-- Copyright -->
+  <div class="bg-white text-gray-400 text-center font-barlow py-4 text-xs">
+    COPYRIGHT @ 2025, MALAGA FINEST - COOKIE POLICY - PRIVACY POLICY - LEGAL NOTICE
+  </div>
+
+</div>
+</main>
+<script>
+  AOS.init({
+    once: true,          // La animación se reproduce solo la primera vez que aparece en pantalla
+    easing: 'ease-in-out', // Suavidad de la animación
+    duration: 1000       // Duración por defecto (en ms)
+  });
+</script>
+
+</body>
+</html>

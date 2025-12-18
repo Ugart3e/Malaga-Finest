@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Málaga Finest Contact</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* =======================
+   B A R L O W
+======================= */
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./fonts/Barlow-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./fonts/Barlow-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./fonts/Barlow-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./fonts/Barlow-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =======================
+   B R A N D O N   G R O T E S Q U E
+======================= */
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('./fonts/BrandonGrotesque-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =======================
+   P L A Y F A I R   D I S P L A Y
+======================= */
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+  .font-barlow {
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-brandon {
+    font-family: 'Brandon Grotesque', sans-serif;
+  }
+  </style>
+
+  <!-- AOS (Animate On Scroll) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+</head>
+<body>
+
+<!-- HEADER -->
+
+<header class="w-full bg-black text-white">
+
+  <!-- Idiomas -->
+  <div class="w-full flex justify-end px-4 md:px-10 py-2 text-xs tracking-widest">
+    <div class="flex gap-2 items-center">
+      <button class="text-white">ES</button>
+      <span class="text-gray-500">/</span>
+      <button class="text-gray-400 hover:text-white transition">ENG</button>
+      <span class="text-gray-500">/</span>
+      <button class="text-gray-400 hover:text-white transition">FR</button>
+    </div>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="w-full px-4 md:px-10 pb-6 md:pb-10">
+
+    <!-- Desktop grande: logo + nav en misma fila -->
+    <div class="hidden lg:grid grid-cols-[1fr_1.2fr_2fr] items-center">
+
+      <div></div>
+
+      <!-- Logo a ~1/3 -->
+      <div class="flex justify-center">
+        <img src="/img/Logo_header.png" alt="Malaga Finest" class="w-52" />
+      </div>
+
+      <!-- Navbar -->
+      <nav class="flex justify-end items-center gap-6 pt-16 text-xs tracking-[0.25em] pr-24">
+        <a href="/index.html" class="border-r border-white px-4 hover:opacity-60 transition">HOME</a>
+        <a href="/pages/services.html" class="border-r border-white pr-4 hover:opacity-60 transition">SERVICES</a>
+        <a href="/pages/MFTeam.html" class="border-r border-white pr-4 hover:opacity-60 transition">MF TEAM</a>
+        <a href="/pages/Contact.html" class="pr-6 hover:opacity-60 transition">CONTACT US</a>
+        <a href="#" class="text-red-600 hover:opacity-70 transition">MEMBERSHIP</a>
+      </nav>
+    </div>
+
+    <!-- Desktop medio: logo y nav en filas separadas -->
+    <div class="hidden md:grid lg:hidden gap-6">
+
+      <div class="flex justify-center">
+        <img src="/img/Logo_header.png" alt="Malaga Finest" class="w-48" />
+      </div>
+
+      <nav class="flex justify-center flex-wrap gap-6 text-xs tracking-[0.25em]">
+        <a href="/index.html">HOME</a>
+        <a href="/pages/services.html">SERVICES</a>
+        <a href="/pages/MFTeam.html">MF TEAM</a>
+        <a href="/pages/Contact.html">CONTACT US</a>
+        <a href="#" class="text-red-600">MEMBERSHIP</a>
+      </nav>
+    </div>
+
+    <!-- Mobile -->
+    <div class="md:hidden flex items-center justify-between mt-4">
+      <img src="/img/Logo_header.png" alt="Malaga Finest" class="w-40" />
+      <button class="text-2xl">☰</button>
+    </div>
+
+  </div>
+</header>
+
+  <main class="mx-auto">
+
+<!-- Logo Intro -->
+<div class="relative h-[300px] sm:h-[450px] rounded overflow-hidden">
+  <!-- Imagen de fondo -->
+  <div class="absolute w-full inset-0 bg-[url('/img/img28.jpg')] bg-cover bg-center"></div>
+  <!-- Overlay y contenido -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="bg-black/65 pt-4 px-6 sm:px-20 text-center max-w-[80%]">
+      <img src="/img/logo_mfinest_formatos_traz_blanco_claro.png" alt="logo" class="w-72 mx-auto mb-2">
+      <p class="text-white mt-4 pb-10 text-xs sm:text-sm font-playfair">
+        We're looking forward <br> to welcoming you in Málaga.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section class="bg-white">
+
+<!-- We’d love to hear from you -->
+<div data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 gap-4 px-4 sm:px-6 md:px-8 lg:px-10">
+  <div class="p-6 sm:p-8 md:p-12 bg-white flex flex-col items-center">
+    <!-- Título principal -->
+    <p class="text-xl sm:text-2xl md:text-2xl text-center font-medium font-playfair text-black">
+      We’d love to hear from you
+    </p>
+    <!-- Subtítulo -->
+    <p class="text-[10px] sm:text-[12px] md:text-[12px] text-center mb-4 sm:mb-6 md:mb-8 text-black font-barlow font-bold uppercase">
+      We are here to help you
+    </p>
+    <!-- Primer párrafo -->
+    <p class="text-sm sm:text-base md:text-base text-center text-black mb-4 sm:mb-6 md:mb-8 font-playfair leading-relaxed">
+      Whether you're interested in becoming a member, exploring collaboration opportunities, or simply learning more about what we do — we’re here to help.
+    </p>
+    <!-- Segundo párrafo -->
+    <p class="text-sm sm:text-base md:text-base text-center text-black font-playfair leading-relaxed">
+      We'll be delighted to welcome you to our offices in Málaga and answer any questions you may have.
+    </p>
+  </div>
+</div>
+
+
+  <!-- Franja negra -->
+  <div class="relative bg-black py-32">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+      <!-- Imagen izquierda -->
+      <div class="relative mt-26">
+        <img
+          src="/img/img20.jpg"
+          class="w-full max-w-md mx-auto"
+          alt=""
+        />
+      </div>
+
+      <!-- Info derecha -->
+      <div class="text-white text-center lg:text-left space-y-8">
+
+        <h3 class="text-2xl font-playfair text-center">
+          Come visit us at<br />our office
+        </h3>
+
+        <!-- Mapa -->
+        <div class="mx-auto lg:mx-0 w-full lg:mx-auto max-w-sm">
+          <img
+            src="/img/img21.jpg"
+            class="w-full"
+            alt=""
+          />
+        </div>
+
+        <!-- Dirección -->
+        <div class="space-y-2 text-sm opacity-90">
+          <div class="flex justify-center lg:justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M12 22s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z" />
+            </svg>
+          </div>
+
+          <p class="text-center font-playfair">
+            Calle Lantana 8, Pinares de San Antón<br />
+            29018, Málaga
+          </p>
+          <p class="text-center font-playfair">
+            Tel: 0034 600 000 000<br />
+            info@malagafinest.com
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+ 
+<!-- Form -->
+<div class="bg-black w-full mt-8 mb-10 py-6">
+  <p class="text-center text-white text-2xl font-playfair mb-6">I want more information</p>
+  <form action="" method="post" class="flex flex-col w-[90%] mx-auto gap-4">
+    <!-- Inputs -->
+    <div class="flex flex-col md:flex-row w-full gap-4">
+      <input type="text" placeholder="Name" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="text" placeholder="Surname" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="email" placeholder="Email" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="number" placeholder="Phone" class="font-playfair h-10 w-full pl-2 rounded-sm">
+    </div>
+    <!-- Checkbox -->
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-2 text-white text-xs font-playfair">
+      <input type="checkbox" class="mt-1 md:mt-0">
+      <p>
+        I have read and accept the Legal Notice and Privacy Policy. I consent to the storage and handling of my data by this website.
+      </p>
+    </div>
+    <!-- Send Button -->
+    <div class="flex justify-center mt-4">
+      <button type="submit" class="px-6 py-2 bg-white text-black rounded-full text-xs font-brandon hover:bg-gray-200 transition">
+        SEND IT
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- Socials / Footer -->
+<div class="bg-[#CFD0C5] bg-[url('/img/logomfsocial.png')] bg-cover bg-center">
+
+  <!-- Logo -->
+  <img src="/img/logo_socials.png" class="w-60 sm:w-72 md:w-80 my-12 mx-auto pb-8" alt="Logo Socials">
+
+  <!-- Navigation links -->
+  <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 mb-6 justify-center items-center font-barlow text-sm text-gray-800">
+    <p class="sm:border-r-2 sm:pr-4 border-gray-800">HOME</p>
+    <p class="sm:border-r-2 sm:pr-4 border-gray-800">SERVICES</p>
+    <p class="sm:border-r-2 sm:pr-4 border-gray-800">MF TEAM</p>
+    <p>CONTACT US</p>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="flex flex-wrap gap-4 sm:gap-12 mb-6 justify-center">
+    <div class="w-10 h-10 bg-[#69675F] rounded-full bg-[url('/img/ig.svg')] bg-center bg-no-repeat bg-[length:20px_20px]"></div>
+    <div class="w-10 h-10 bg-[#69675F] rounded-full bg-[url('/img/x.svg')] bg-center bg-no-repeat bg-[length:20px_20px]"></div>
+    <div class="w-10 h-10 bg-[#69675F] rounded-full bg-[url('/img/yt.svg')] bg-center bg-no-repeat bg-[length:20px_20px]"></div>
+    <div class="w-10 h-10 bg-[#69675F] rounded-full bg-[url('/img/in.svg')] bg-center bg-no-repeat bg-[length:20px_20px]"></div>
+  </div>
+
+  <!-- Contact info -->
+  <p class="text-center text-gray-600 font-barlow mb-6">
+    info@malagafinest.com <b class="font-extrabold"> · </b> 0034 678 909 000
+  </p>
+
+  <!-- Copyright -->
+  <div class="bg-white text-gray-400 text-center font-barlow py-4 text-xs">
+    COPYRIGHT @ 2025, MALAGA FINEST - COOKIE POLICY - PRIVACY POLICY - LEGAL NOTICE
+  </div>
+
+</div>
+
+  </main>
+<script>
+  AOS.init({
+    once: true,          // La animación se reproduce solo la primera vez que aparece en pantalla
+    easing: 'ease-in-out', // Suavidad de la animación
+    duration: 1000       // Duración por defecto (en ms)
+  });
+</script>
+
+</body>
+</html>
