@@ -248,52 +248,57 @@
     </p>
   </div>
 </div>
+
 <!-- Contenedor de los 3 bloques -->
 <div class="flex flex-col">
 
   <!-- Bloque 1: A Clear Vision -->
   <div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
-    <div class="h-full">
-      <img src="/img/img19(1).jpg" alt="" class="w-full h-full object-cover">
-    </div>
-    <div class="bg-black text-white flex flex-col justify-center px-6 sm:px-10 md:px-12 py-8 md:py-16 h-full">
+    <!-- Texto primero siempre -->
+    <div class="bg-black text-white flex flex-col justify-center px-6 sm:px-10 md:px-12 py-8 md:py-16 h-full order-1 md:order-1">
       <p class="text-2xl md:text-2xl font-playfair mb-2">A Clear Vision</p>
       <p class="text-xs md:text-xs font-barlow font-bold mb-4 md:mb-6">A DIFFERENT WAY TO EXPERIENCE MÁLAGA.</p>
       <p class="text-xs md:text-xs font-playfair leading-relaxed">
         Malaga Finest responds to this demand with a clear vision: to offer a bespoke concierge service tailored to each client, lifestyle, and property in Málaga. A service where every detail matters, and where excellence is not a bonus — it's the starting point.
       </p>
     </div>
+    <!-- Imagen después -->
+    <div class="h-full order-2 md:order-2">
+      <img src="/img/img19(1).jpg" alt="" class="w-full h-full object-cover">
+    </div>
   </div>
-
-  <!-- Bloque 2: Our Clients Demands -->
+  <!-- Bloque 2: Our Clients Demands (imagen a la izquierda en desktop) -->
   <div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
-    <div class="bg-black text-white flex flex-col justify-center px-6 sm:px-10 md:px-12 py-8 md:py-16 text-right h-full">
+    <!-- Texto primero en móvil, pero segunda columna en desktop -->
+    <div class="bg-black text-white flex flex-col justify-center px-6 sm:px-10 md:px-12 py-8 md:py-16 text-right h-full order-1 md:order-2">
       <p class="text-2xl md:text-2xl font-playfair mb-2">Our Clients Demands</p>
       <p class="text-xs md:text-xs font-barlow font-bold mb-4 md:mb-6">EFFICIENCY & EXPERIENCE</p>
       <p class="text-xs md:text-xs font-playfair leading-relaxed">
         Creating tailor-made solutions is not an option — it’s a necessity when dealing with high-value assets and profiles that demand discretion, efficiency, and expertise. Ultimately, it’s about experiencing today’s Málaga from a local and authentic perspective.
       </p>
     </div>
-    <div class="h-full">
+    <!-- Imagen -->
+    <div class="h-full order-2 md:order-1">
       <img src="/img/img17(1).jpg" alt="" class="w-full h-full object-cover">
     </div>
   </div>
-
   <!-- Bloque 3: We Take Care -->
   <div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
-    <div class="h-full">
-      <img src="/img/img18(1).jpg" alt="" class="w-full h-full object-cover">
-    </div>
-    <div class="bg-black text-white flex flex-col justify-center px-6 sm:px-10 md:px-12 py-8 md:py-16 h-full">
+    <!-- Texto primero siempre -->
+    <div class="bg-black text-white flex flex-col justify-center px-6 sm:px-10 md:px-12 py-8 md:py-16 h-full order-1 md:order-1">
       <p class="text-2xl md:text-2xl font-playfair mb-2">We Take Care</p>
       <p class="text-xs md:text-xs font-barlow font-bold mb-4 md:mb-6">OF EVERYTHING</p>
       <p class="text-xs md:text-xs font-playfair leading-relaxed">
         From private stays in unique villas to unforgettable gastronomic experiences — including premium transfers, priority reservations, or full property management — at Malaga Finest, we take care of everything with utmost discretion, efficiency, and an authentic touch that sets us apart.
       </p>
     </div>
+    <!-- Imagen después -->
+    <div class="h-full order-2 md:order-2">
+      <img src="/img/img18(1).jpg" alt="" class="w-full h-full object-cover">
+    </div>
   </div>
-
 </div>
+
 
 <!-- Málaga Finest Client -->
 <div data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 px-4 sm:px-6 md:px-8 lg:px-10">
@@ -369,24 +374,23 @@
 
 </div>
 
-<!-- Our Services -->
+  <!-- Our Services -->
 <div class="relative h-[300px] sm:h-[450px] md:h-[750px] rounded overflow-hidden">
-  <!-- Imagen de fondo -->
   <div class="absolute w-full h-full inset-0 bg-[url('/img/img25.jpg')] bg-cover bg-center"></div>
-  <!-- Overlay con contenido -->
   <div class="absolute inset-0 flex items-center justify-center">
-    <div class="bg-black/60 p-6 sm:p-8 md:p-12 rounded-lg text-center max-w-[40%]">
-      <h2 class="text-white text-2xl sm:text-3xl md:text-4xl font-semibold font-playfair mb-2">
+    <div class="bg-black/60 p-4 sm:p-8 md:p-12 rounded-lg text-center 
+                max-w-[90%] sm:max-w-[70%] md:max-w-[40%]">
+      <h2 class="text-white text-xl sm:text-2xl md:text-4xl font-semibold font-playfair mb-2">
         Our Services
       </h2>
-      <p class="text-white text-xs sm:text-sm md:text-sm font-barlow font-bold mb-4">
+      <p class="text-white text-xs sm:text-sm md:text-sm font-barlow font-bold mb-2 sm:mb-4">
         CONNECT WITH THE BEST OF MÁLAGA
       </p>
-      <p class="text-white text-xs sm:text-sm md:text-sm font-playfair leading-relaxed mb-6">
+      <p class="text-white text-xs sm:text-sm md:text-sm font-playfair leading-relaxed mb-4 sm:mb-6">
         Malaga Finest offers an exclusive range of services designed to ensure seamless and sophisticated integration into the city. From personalized concierge and relocation support to private events, tailor-made experiences, and strategic connections — we connect our clients with the very best of Málaga, blending local authenticity with international standards.
       </p>
       <a href="/pages/services.html">
-        <div class="hover:cursor-pointer bg-white rounded-xl w-40 sm:w-48 mx-auto text-center py-2 font-playfair text-sm hover:bg-gray-200 transition">
+        <div class="hover:cursor-pointer bg-white rounded-xl w-36 sm:w-44 md:w-48 mx-auto text-center py-2 font-playfair text-sm hover:bg-gray-200 transition">
           Malaga Finest Services
         </div>
       </a>
@@ -397,13 +401,13 @@
 <!-- Form -->
 <div class="bg-black w-full mt-8 mb-10 py-6">
   <p class="text-center text-white text-2xl font-playfair mb-6">I want more information</p>
-  <form action="" method="post" class="flex flex-col w-[90%] mx-auto gap-4">
+  <form action="https://formspree.io/f/mpqawnro" method="post" class="flex flex-col w-[90%] mx-auto gap-4">
     <!-- Inputs -->
     <div class="flex flex-col md:flex-row w-full gap-4">
-      <input type="text" placeholder="Name" class="font-playfair h-10 w-full pl-2 rounded-sm">
-      <input type="text" placeholder="Surname" class="font-playfair h-10 w-full pl-2 rounded-sm">
-      <input type="email" placeholder="Email" class="font-playfair h-10 w-full pl-2 rounded-sm">
-      <input type="number" placeholder="Phone" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="text" name="Name" placeholder="Name" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="text" name="Surname" placeholder="Surname" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="email" name="Email" placeholder="Email" class="font-playfair h-10 w-full pl-2 rounded-sm">
+      <input type="number" name="Phone" placeholder="Phone" class="font-playfair h-10 w-full pl-2 rounded-sm">
     </div>
     <!-- Checkbox -->
     <div class="flex flex-col md:flex-row items-start md:items-center gap-2 text-white text-xs font-playfair">
@@ -427,13 +431,14 @@
   <!-- Logo -->
   <img src="/img/logo_socials.png" class="w-60 sm:w-72 md:w-80 my-12 mx-auto pb-8" alt="Logo Socials">
 
-  <!-- Navigation links -->
-  <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 mb-6 justify-center items-center font-barlow text-sm text-gray-800">
-    <p class="sm:border-r-2 sm:pr-4 border-gray-800">HOME</p>
-    <p class="sm:border-r-2 sm:pr-4 border-gray-800">SERVICES</p>
-    <p class="sm:border-r-2 sm:pr-4 border-gray-800">MF TEAM</p>
-    <p>CONTACT US</p>
-  </div>
+<!-- Navigation links -->
+<div class="flex flex-col sm:flex-row gap-2 sm:gap-6 mb-6 justify-center items-center font-barlow text-sm text-gray-800">
+  <a href="/index.html" class="sm:border-r-2 sm:pr-4 border-gray-800 hover:text-black transition">HOME</a>
+  <a href="/pages/services.html" class="sm:border-r-2 sm:pr-4 border-gray-800 hover:text-black transition">SERVICES</a>
+  <a href="/pages/MFTeam.html" class="sm:border-r-2 sm:pr-4 border-gray-800 hover:text-black transition">MF TEAM</a>
+  <a href="/pages/Contact.html" class="hover:text-black transition">CONTACT US</a>
+</div>
+
 
   <!-- Social Icons -->
   <div class="flex flex-wrap gap-4 sm:gap-12 mb-6 justify-center">
